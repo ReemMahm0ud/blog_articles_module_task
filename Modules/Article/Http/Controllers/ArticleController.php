@@ -17,7 +17,7 @@ class ArticleController extends Controller
     protected $articleService;
 
     /**
-     * articlecontroller constructor
+     * articleController constructor
      *
      * @param articleService $articleService
      */
@@ -34,7 +34,20 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('article::index');
+        //return view('article::index');
+        // $result =['status'=>200];
+
+        // try {
+        //     $result['data'] = $this->articleService->getAll();
+        // } catch (Exception $e) {
+        //     //throw $th;
+        //     $result = [
+        //         'status'=>500,
+        //         'error'=>$e->getMessage()
+        //     ];
+        // }
+
+        // return response()->json($result,$result['status']);
     }
 
     /**
@@ -54,25 +67,25 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         //
-        $data = $request->only([
-            'created_by',
-            'title',
-            'decription',
-        ]);
+        // $data = $request->only([
+        //     'created_by',
+        //     'title',
+        //     'description',
+        // ]);
 
-        $result = ['status'=>200];
+        // $result = ['status'=>200];
 
-        try {
-            $result['data' ] = $this->articleService->addArticle($data);
-        } catch (Exception $e) {
-            //throw $th;
-            $result = [
-                'status'=> 500,
-                'error'=> $e->getMessage()
-            ];
-        }
+        // try {
+        //     $result['data' ] = $this->articleService->addArticle($data);
+        // } catch (Exception $e) {
+        //     //throw $th;
+        //     $result = [
+        //         'status'=> 500,
+        //         'error'=> $e->getMessage()
+        //     ];
+        // }
 
-        return response()->json($result,$result['status']);
+        // return response()->json($result,$result['status']);
     }
 
     /**
