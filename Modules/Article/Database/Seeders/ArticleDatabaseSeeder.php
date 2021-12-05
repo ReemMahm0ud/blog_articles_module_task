@@ -4,6 +4,7 @@ namespace Modules\Article\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Article\Entities\Article;
 
 class ArticleDatabaseSeeder extends Seeder
 {
@@ -17,5 +18,7 @@ class ArticleDatabaseSeeder extends Seeder
         Model::unguard();
 
         // $this->call("OthersTableSeeder");
+        Article::factory()->times(10)->create();
+        
     }
 }

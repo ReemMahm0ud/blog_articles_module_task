@@ -9,7 +9,16 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'created_by',
+        'title',
+        'description',
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
     
     protected static function newFactory()
     {
