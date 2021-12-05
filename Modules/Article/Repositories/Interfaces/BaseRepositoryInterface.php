@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Article\Repositorires\Interfaces;
+namespace Modules\Article\Repositories\Interfaces;
 
 interface BaseRepositoryInterface
 {

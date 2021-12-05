@@ -1,9 +1,9 @@
 <?php
 
-namespace Modules\Article\Repositorires;
+namespace Modules\Article\Repositories;
 
 use Modules\Article\Entities\Article;
-use Modules\Article\Repositorires\Interfaces\BaseRepositoryInterface;
+use Modules\Article\Repositories\Interfaces\BaseRepositoryInterface;
 
 class ArticleRepository implements BaseRepositoryInterface
 {
@@ -18,7 +18,7 @@ class ArticleRepository implements BaseRepositoryInterface
     {
         //
         $this->article = $article;
-        
+
     }
 
     /**
@@ -75,7 +75,7 @@ class ArticleRepository implements BaseRepositoryInterface
         $article->update();
 
         return response()->json('article updated!');
-        
+
     }
 
     public function deleteArticle ($id)

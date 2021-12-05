@@ -3,7 +3,7 @@
 namespace Modules\Article\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Modules\Article\Repositorires\Interfaces\BaseRepositoryInterface;
+use Modules\Article\Repositories\Interfaces\BaseRepositoryInterface;
 
 
 class RepositoryServiceProvider extends ServiceProvider

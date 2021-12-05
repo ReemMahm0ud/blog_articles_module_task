@@ -2,12 +2,32 @@
 
 namespace Modules\Article\Http\Controllers;
 
+use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Article\Services\ArticleService;
+
 
 class ArticleController extends Controller
 {
+    /**
+     *  @var ArticleService
+     */
+    protected $articleService;
+
+    /**
+     * articlecontroller constructor
+     *
+     * @param articleService $articleService
+     */
+    public function __construct(ArticleService $articleService)
+    {
+        $this->articleService = $articleService;
+    }
+
+
+
     /**
      * Display a listing of the resource.
      * @return Renderable
@@ -34,6 +54,25 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         //
+        $data = $request->only([
+            'created_by',
+            'title',
+            'decription',
+        ]);
+
+        $result = ['status'=>200];
+
+        try {
+            $result['data' ] = $this->articleService->addArticle($data);
+        } catch (Exception $e) {
+            //throw $th;
+            $result = [
+                'status'=> 500,
+                'error'=> $e->getMessage()
+            ];
+        }
+
+        return response()->json($result,$result['status']);
     }
 
     /**

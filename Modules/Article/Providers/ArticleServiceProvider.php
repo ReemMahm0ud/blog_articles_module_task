@@ -4,7 +4,7 @@ namespace Modules\Article\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
-use Modules\Article\Repositorires\Interfaces\BaseRepositoryInterface;
+use Modules\Article\Repositories\Interfaces\BaseRepositoryInterface;
 
 class ArticleServiceProvider extends ServiceProvider
 {
