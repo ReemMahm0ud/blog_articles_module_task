@@ -32,7 +32,7 @@ class ArticleService
     public function addArticle($data)
     {
         $validator = Validator::make($data,[
-            'created_by'=>'required|unique',
+            'created_by'=>'required',
             'title'=>'required',
             'description'=>'required'
         ]);
