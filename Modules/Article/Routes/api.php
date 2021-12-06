@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Modules\Article\Http\Controllers\API\ArticleAPIController;
 
-use Illuminate\Routing\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +16,9 @@ use Illuminate\Routing\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/article', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/article', function (Request $request) {
+//     return $request->user();
+// });
 
 //post article
 Route::post('/addArticle',[ArticleAPIController::class, 'store'] );
