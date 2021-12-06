@@ -27,10 +27,10 @@ Route::post('/addArticle',[ArticleAPIController::class, 'store'] );
 Route::get('/getALLarticles',[ArticleAPIController::class, 'index'] );
 
 //get article by id
-Route::get('/articleByID',[ArticleAPIController::class, 'show'] );
+Route::get('/articleByID/{id}',[ArticleAPIController::class, 'show'] );
 
 //update article
-Route::put('/updateArticle',[ArticleAPIController::class, 'update'] );
+Route::put('/updateArticle/{id}',[ArticleAPIController::class, 'update'] );
 
 //delete article
-Route::delete('/deleteArticle',[ArticleAPIController::class, 'destroy'] );
+Route::delete('/deleteArticle/{id}',[ArticleAPIController::class, 'destroy'] );
