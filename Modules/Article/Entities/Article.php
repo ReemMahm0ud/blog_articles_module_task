@@ -13,13 +13,13 @@ class Article extends Model
         'created_by',
         'title',
         'description',
+        'created_at',
     ];
 
     protected $hidden = [
-        'created_at',
         'updated_at',
     ];
-    
+
     protected static function newFactory()
     {
         return \Modules\Article\Database\factories\ArticleFactory::new();
