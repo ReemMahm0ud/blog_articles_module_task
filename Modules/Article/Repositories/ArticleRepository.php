@@ -62,12 +62,11 @@ class ArticleRepository implements BaseRepositoryInterface
     public function updateArticle ($data,$id)
     {
         $article = $this->article->find($id);
-        if ($data['title']){
-            $article->created_by = $data['title'];
-        };
-        if ($data['description']){
-            $article->created_by = $data['description'];
-        };
+
+
+            $article->title = $data['title'];
+            $article->created_by = $data['created_by'];
+            $article->description = $data['description'];
 
         $article->update();
 

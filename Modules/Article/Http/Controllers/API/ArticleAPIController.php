@@ -110,7 +110,8 @@ class ArticleAPIController extends Controller
         //
         $data =$request->only([
             'title',
-            'description'
+            'description',
+            'created_by'
         ]);
 
         $result = ['status'=>200];
