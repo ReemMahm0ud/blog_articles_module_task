@@ -1,4 +1,6 @@
-##project setup guide
+# blog_articles_module_task
+
+# project setup guide
 
 1) composer install
 2) npm i
