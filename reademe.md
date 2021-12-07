@@ -1,4 +1,4 @@
-##project setup guide
+#project setup guide
 
 1) composer install
 2) npm i
